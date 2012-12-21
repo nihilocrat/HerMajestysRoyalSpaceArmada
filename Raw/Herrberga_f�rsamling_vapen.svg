@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="251"
+   height="304.20001"
+   id="svg4166">
+  <defs
+     id="defs4168" />
+  <metadata
+     id="metadata1880"><rdf:RDF><cc:Work
+         rdf:about=""><dc:title>Herrberga forsamlingsvapen</dc:title><dc:date>2008-12-15</dc:date><dc:creator><cc:Agent><dc:title>Lokal_Profil</dc:title></cc:Agent></dc:creator><cc:license
+         rdf:resource="http://creativecommons.org/licenses/by-sa/2.5/" /><dc:rights><cc:Agent><dc:title>cc-by-sa-2.5</dc:title></cc:Agent></dc:rights><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work><cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/2.5/"><cc:permits
+         rdf:resource="http://web.resource.org/cc/Reproduction" /><cc:permits
+         rdf:resource="http://web.resource.org/cc/Distribution" /><cc:requires
+         rdf:resource="http://web.resource.org/cc/Notice" /><cc:requires
+         rdf:resource="http://web.resource.org/cc/Attribution" /><cc:permits
+         rdf:resource="http://web.resource.org/cc/DerivativeWorks" /><cc:requires
+         rdf:resource="http://web.resource.org/cc/ShareAlike" /></cc:License></rdf:RDF>
+  </metadata>
+  <path
+     d="M 249.55058,1.4395041 L 1.4495291,1.4395041 L 1.4495291,174.9361 C 0.68228908,268.65698 81.738969,302.75585 125.50006,302.75585 C 168.49391,302.75585 250.31781,268.65698 249.55058,174.9361 L 249.55058,1.4395041 z "
+     style="fill:#ffcd50"
+     id="Shield" />
+  <path
+     d="M 83.844,1.4315072 L 83.844,294.52526 C 98.978271,300.18608 113.70421,302.74401 125.50025,302.74401 C 137.33926,302.74401 151.90428,300.24081 166.844,294.74401 L 166.844,1.4315072 L 125.50025,1.4315072 L 83.844,1.4315072 z "
+     style="fill:#003d8f"
+     id="Stolpe" />
+  <path
+     d="M -75.84828 95.213799 A 29.855173 29.855173 0 1 1  -135.55863,95.213799 A 29.855173 29.855173 0 1 1  -75.84828 95.213799 z"
+     transform="matrix(1.189189,0,0,1.189189,251.0454,-68.00653)"
+     style="fill:#ffcd50"
+     id="Roundel" />
+  <use
+     transform="translate(0,216)"
+     id="Roundel-2"
+     x="0"
+     y="0"
+     width="251"
+     height="304.20001"
+     xlink:href="#Roundel" />
+  <path
+     d="M 1.4375,93.25 L 1.4375,174.9375 C 1.3562176,184.86642 2.198707,194.12908 3.8125,202.75 L 247.15625,202.75 C 248.78453,194.12908 249.64378,184.86642 249.5625,174.9375 L 249.5625,93.25 L 1.4375,93.25 z "
+     style="fill:#d40000"
+     id="Bjalke" />
+  <path
+     d="M 125.49995,103 C 100.65996,103 80.499952,123.16001 80.499952,148.00001 C 80.499952,172.84 100.65995,193 125.49995,193 C 150.33994,193 170.49995,172.84 170.49995,148.00001 C 170.49995,123.16001 150.33994,103 125.49995,103 z M 125.49995,114.25 C 127.49281,114.25 129.45162,114.42443 131.34995,114.75625 L 131.34995,132.25 L 119.64995,132.25 L 119.64995,114.75625 C 121.54827,114.42443 123.50709,114.25 125.49995,114.25 z M 109.74995,118.15938 L 109.74995,132.25 L 95.659332,132.25 C 98.832652,126.25307 103.75303,121.33271 109.74995,118.15938 z M 141.24995,118.15938 C 147.24687,121.33271 152.16725,126.25307 155.34057,132.25 L 141.24995,132.25 L 141.24995,118.15938 z M 92.256202,142.15001 L 109.74995,142.15001 L 109.74995,153.85 L 92.256202,153.85 C 91.924392,151.95168 91.749952,149.99287 91.749952,148.00001 C 91.749952,146.00714 91.924392,144.04833 92.256202,142.15001 z M 119.64995,142.15001 L 131.34995,142.15001 L 131.34995,153.85 L 119.64995,153.85 L 119.64995,142.15001 z M 141.24995,142.15001 L 158.74369,142.15001 C 159.07551,144.04833 159.24994,146.00714 159.24994,148.00001 C 159.24994,149.99287 159.07551,151.95168 158.74369,153.85 L 141.24995,153.85 L 141.24995,142.15001 z M 95.659332,163.75001 L 109.74995,163.75001 L 109.74995,177.84062 C 103.75303,174.6673 98.832652,169.74694 95.659332,163.75001 z M 119.64995,163.75001 L 131.34995,163.75001 L 131.34995,181.24375 C 129.45162,181.57557 127.49281,181.75001 125.49995,181.75001 C 123.50709,181.75001 121.54827,181.57557 119.64995,181.24375 L 119.64995,163.75001 z M 141.24995,163.75001 L 155.34057,163.75001 C 152.16725,169.74694 147.24687,174.6673 141.24995,177.84062 L 141.24995,163.75001 z "
+     style="fill:#ffcd50;fill-rule:evenodd"
+     id="Kvarnhjul" />
+  <path
+     d="M 249.55062,1.4395041 L 1.449569,1.4395041 L 1.449569,174.9361 C 0.68232904,268.65698 81.739009,302.75585 125.5001,302.75585 C 168.49395,302.75585 250.31785,268.65698 249.55062,174.9361 L 249.55062,1.4395041 z "
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:1.88832211;stroke-linejoin:bevel"
+     id="Frame" />
+</svg>

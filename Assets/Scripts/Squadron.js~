@@ -1,0 +1,307 @@
+import Globals;
+
+public var fleetName = "1ere Habitants";
+public var team = 1;
+public var labelPrefab : GameObject;
+public var rank = 0;
+public var flagship : GameObject;
+public var currentFormation = "combat";
+
+public var Chatter_engage : AudioClip;
+public var Chatter_roger : AudioClip;
+
+// list of prefabs in a particular order, determining fleet design
+public var design : GameObject[];
+
+// list of actual ships on the field belonging to this fleet
+public var members = Array();
+private var memberMax = 7;
+
+private var formations = {
+	"combat" : [
+		new Vector3(0,0,0),
+		new Vector3(-1.5,0,1),
+		new Vector3(-0.5,0,1),
+		new Vector3(0.5,0,1),
+		new Vector3(1.5,0,1),
+		new Vector3(-1,0,0),
+		new Vector3(1,0,0)
+	],
+	"skirmish" : [
+		new Vector3(0,0,0),
+		new Vector3(-1,0,1),
+		new Vector3( 1,0,1),
+		new Vector3(-1,0,-1),
+		new Vector3(1,0,-1),
+		new Vector3(-2,0,0),
+		new Vector3(2,0,0)
+	],
+	"column" : [
+		new Vector3(0,0, 0),
+		new Vector3(0,0, 3),
+		new Vector3(0,0, 2),
+		new Vector3(0,0,-2),
+		new Vector3(0,0,-3),
+		new Vector3(0,0, 1),
+		new Vector3(0,0,-1)
+	]
+};
+
+private var rank_xp_reqs = [
+	0,
+	2000,
+	4000,
+	6000
+];
+
+private var morale = 100.0;
+private var xp = 0;
+
+// for keeping track of healing
+private var max_healCooldown = 1.0;
+private var healCooldown = 0.0;
+
+private var max_tickCooldown = 1.0;
+private var tickCooldown = 0.0;
+
+private var status : String;
+private var label : Transform;
+
+private var team_material : Material;
+private var combatTarget : Squadron;
+private var combatTargetPlanet : Planet;
+private var moveTarget : Vector3;
+
+
+function Start() {
+	// adjust XP to match rank
+	xp = (rank - 1) * Globals.xp_per_level * (Globals.xp_scale * rank);
+	
+	team_material = Player.getSingleton().getMaterial(team);
+	
+	// NOTE: assumes a predictable layout of designs[]
+	if(flagship == null || design.length <= 0) return true;
+	AddShip(flagship);
+	
+	var o = flagship.transform.position;
+	var r = flagship.transform.rotation;
+	AddShip( Instantiate(design[0], o + formations["combat"][1], r) );
+	AddShip( Instantiate(design[0], o + formations["combat"][2], r) );
+	AddShip( Instantiate(design[0], o + formations["combat"][3], r) );
+	AddShip( Instantiate(design[0], o + formations["combat"][4], r) );
+	
+	// spawn supports
+	if(design[1] != null) {
+		AddShip( Instantiate(design[1], o + formations["combat"][5], r) );
+	}
+	if(design[2] != null) {
+		AddShip( Instantiate(design[2], o + formations["combat"][6], r) );
+	}
+	
+	// spawn flagship
+	//AddShip(Instantiate(design[3], o, r));
+	
+	
+	var labelPos = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0,1,0));
+	//var prefab = GameObject("fleetLabel");
+	//prefab.AddComponent(GUIText);
+	//prefab.AddComponent(GUITexture);
+	label = Instantiate(labelPrefab, labelPos, Quaternion.identity).transform;
+	//label.guiText.text = fleetName;
+	
+	// color the banner correctly
+	//GetComponent(SpriteObject);
+}
+
+function LateUpdate()
+{
+	//label.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0,1,0));
+	if(healCooldown > 0) healCooldown -= Time.deltaTime;
+
+	// Out of Combat actions
+	if(tickCooldown > 0) tickCooldown -= Time.deltaTime;
+	else {
+		if(combatTarget == null && combatTargetPlanet == null) {
+			if(morale < 100) morale += 1;
+		}
+		tickCooldown = max_tickCooldown;
+	}
+
+	var still_alive = false;
+	for(var m : FleetShip in members) {
+		if(m.alive) still_alive = true;
+	}
+	
+	if(!still_alive) Kill();
+}
+
+function AddShip(obj : GameObject) {
+	obj.renderer.material = team_material;
+	ship = obj.GetComponent(FleetShip);
+	ship.squadron = this;
+	members.Add(ship);
+}
+
+function ReviveFlagship() {
+	//Instantiate();
+}
+
+function GoTo(destination : Vector3) {
+	//get the heading we intend to go to
+	var dir = (destination - transform.position).normalized;
+	
+	var dest = new GameObject();
+	dest.transform.position = destination;
+	dest.transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
+	
+	moveTarget = dest.transform.position;
+	
+	for(var i = 0; i < members.length; i++) {
+		if(!members[i].active) continue;
+		var real_dest = destination + dest.transform.TransformDirection(formations[currentFormation][i]);
+		members[i].GetComponent(FleetShip).SendMessage("GoTo", real_dest);
+	}
+	/*
+	for(var s : GameObject in members) {
+		s.GetComponent(FleetShip).GoTo(destination);
+	}*/
+	
+	//delete dest;
+}
+
+function RetreatTo(destination : Vector3) {
+	combatTarget = null;
+	for(var m : FleetShip in members) m.Attack(null);
+	GoTo(destination);
+	
+	// set retreat status so the player is unable to command
+}
+
+function Attack(other : Squadron) {
+	if(combatTarget != null) return;
+	Debug.Log(fleetName + " attacks " + other.fleetName + "!");
+	
+	if(team == Player.getSingleton().team)
+		audio.PlayOneShot(Chatter_engage);
+	
+	combatTarget = other;
+	
+	// provide attack orders to squadmates
+	for(var m in members) {
+		var target = other.GetClosestMember(m.transform);
+		m.GetComponent(FleetShip).Attack(target);
+	}
+	
+	status = "combat";
+}
+
+
+function AttackPlanet(other : Planet) {
+	if(combatTarget != null || combatTargetPlanet != null) return;
+	
+	if(team == Player.getSingleton().team)
+		audio.PlayOneShot(Chatter_engage);
+	
+	//combatTarget = other.GetComponent(Squadron);
+	combatTargetPlanet = other;
+	
+	// provide attack orders to squadmates
+	for(var m in members) {
+		//m.GetComponent(FleetShip).Attack(other.transform);
+		m.SendMessage("Attack", other.transform);
+	}
+}
+
+
+function AddXP(amount : int) {
+	xp += amount;
+	// compare XP to level scale
+	// adjust rank based on this.
+	if(xp >= rank_xp_reqs[rank])
+	{
+		rank++;
+	}
+}
+
+function AddMorale(amount : int) {
+	if(morale > 0) {
+		morale += amount;
+	}
+	// rout when we run out of morale
+	else {
+		// rout
+	}
+}
+
+function GetWeakestMember() {
+	var weakest_hp = 100;
+	var weakest : FleetShip;
+	for(var m in members) {
+		if(m.alive && m.GetHP() < weakest_hp) {
+			weakest_hp = m.GetHP();
+			weakest = m;
+		}
+	}
+	
+	// everyone is at full health, now look for dead ships
+	if(weakest == null) {
+		for(var m in members) {
+			if(!m.alive) {
+				weakest = m;
+				// FIXME: set to the correct place in squad
+				m.Revive(flagship.transform.position, flagship.transform.rotation);
+				break;
+			}
+		}
+	}
+	
+	return weakest;
+}
+
+
+function GetClosestMember(other : Transform) {
+	var closest : Transform;
+	var closest_dist = Mathf.Infinity;
+	for(var other_m in members) {
+		if(!other_m.alive) continue;
+		
+		var dist = (other.position - other_m.transform.position).sqrMagnitude;
+		if(dist < closest_dist) {
+			closest = other_m.transform;
+			closest_dist = dist;
+		}
+	}
+	
+	return closest;
+}
+
+
+function GetStatus() {
+	return status;
+}
+
+function GetCombatTarget() {
+	//if(combatTargetPlanet != null) return combatTargetPlanet;
+	return combatTarget;
+}
+
+
+function GetCombatTargetPlanet() {
+	//if(combatTargetPlanet != null) return combatTargetPlanet;
+	return combatTargetPlanet;
+}
+
+
+function GetMoveTarget() {
+	return moveTarget;
+}
+
+function Kill() {
+	// no theatrics for now
+	Debug.Log(fleetName +" have been annihilated!");
+	for(var m : FleetShip in members) {
+		Destroy(m.gameObject);
+	}
+	
+	Destroy(gameObject);
+}

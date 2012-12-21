@@ -1,0 +1,23 @@
+
+public var left : int;
+public var bottom : int;
+public var width : int;
+public var height : int;
+
+var spriteManager : GameObject;// : SpriteManager;
+
+private var sprite;// : Sprite;
+
+function Awake() {
+    var comp = spriteManager.GetComponent('SpriteManager');
+    sprite = comp.AddSprite(gameObject, // The game object to associate the sprite to
+										transform.localScale.x, 		// The width of the sprite
+										transform.localScale.y, 		// The height of the sprite
+										left, 		// Left pixel
+										bottom, 		// Bottom pixel
+									    width, 		// Width in pixels
+										height, 		// Height in pixels
+										false);		// Billboarded?
+}
+
+

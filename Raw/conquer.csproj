@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>9.0.21022</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{3D9BC6C1-8A58-5AD9-598A-93EEB22DC1A4}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace>Irrelevant</RootNamespace>
+	<AssemblyName>Irrelvant</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_3_0;UNITY_3_3;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/devel/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/devel/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+	<Reference Include="Boo.Lang">
+	  <HintPath>C:/devel/Unity/Editor/Data/Mono/lib/mono/unity/Boo.Lang.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityScript">
+	  <HintPath>C:/devel/Unity/Editor/Data/Mono/lib/mono/unity/UnityScript.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <None Include="Assets\Data\anglosaxon_first_female.txt" />
+     <None Include="Assets\Data\anglosaxon_first_male.txt" />
+     <None Include="Assets\Data\anglosaxon_norman_surname.txt" />
+     <None Include="Assets\Data\anglosaxon_surname.txt" />
+     <None Include="Assets\Data\danish_surname.txt" />
+     <None Include="Assets\Data\french_first_male.txt" />
+     <None Include="Assets\Data\greek_surname.txt" />
+     <None Include="Assets\Data\latin_first_female.txt" />
+     <None Include="Assets\Data\latin_first_male.txt" />
+     <None Include="Assets\Data\latin_surname.txt" />
+     <None Include="Assets\Data\norwegian_surname.txt" />
+     <None Include="Assets\Data\pcg_celtic_first_female.txt" />
+     <None Include="Assets\Data\pcg_celtic_first_male.txt" />
+     <None Include="Assets\Data\pcg_cthulhu_placename.txt" />
+     <None Include="Assets\Data\pcg_greek_first_female.txt" />
+     <None Include="Assets\Data\pcg_greek_first_male.txt" />
+     <None Include="Assets\Data\pcg_viking_first_female.txt" />
+     <None Include="Assets\Data\pcg_viking_first_male.txt" />
+     <None Include="Assets\Data\places_latin.txt" />
+     <None Include="Assets\Data\places_latin_british.txt" />
+     <None Include="Assets\Data\places_russian.txt" />
+     <None Include="Assets\Data\russian_surname.txt" />
+     <None Include="Assets\Data\swedish_surname.txt" />
+     <None Include="Assets\Fonts\Open Font License.txt" />
+     <None Include="Assets\GUI Assets\Shaders\GUIManager with Backface.shader" />
+     <None Include="Assets\GUI Assets\Shaders\GUIManager.shader" />
+     <Compile Include="Assets\GUI Scripts\Button1.cs" />
+     <Compile Include="Assets\GUI Scripts\Button2.cs" />
+     <Compile Include="Assets\GUI Scripts\Button3.cs" />
+     <Compile Include="Assets\GUI Scripts\Button4.cs" />
+     <Compile Include="Assets\Plugins\SpriteManager\LinkedSpriteManager.cs" />
+     <Compile Include="Assets\Plugins\SpriteManager\Sprite.cs" />
+     <Compile Include="Assets\Plugins\SpriteManager\SpriteManager.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\AutonomousVehicle.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\Radar.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\RadarPing.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForAlignment.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForCohesion.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForEvasion.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForNeighborAvoidance.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForNeighbors.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForPoint.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForPursuit.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForSeparation.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForSphericalObstacleAvoidance.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForTarget.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForTether.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerForWander.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\Steering.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\SteerToFollowPath.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Behaviors\Vehicle.cs" />
+     <None Include="Assets\Plugins\UnitySteer\C5\LICENSE.txt" />
+     <Compile Include="Assets\Plugins\UnitySteer\Editor\AutonomousVehicleEditor.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Editor\Vector3FoldoutEditor.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Editor\VehicleEditor.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Helpers\IRadarReceiver.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Helpers\ITick.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Helpers\RandomizePosition.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Helpers\SteeringEvent.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\Helpers\Tick.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\UnderReview\lq.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\UnderReview\lqProximity.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\UnderReview\Proximity.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\UnderReview\SimpleVehicle.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\UnderReview\SteeringVehicle.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\UnderReview\SteerLibrary.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\AngryAntPathway.cs" />
+     <None Include="Assets\Plugins\UnitySteer\License.txt" />
+     <Compile Include="Assets\Plugins\UnitySteer\Obstacle.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\OpenSteerUtility.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\PathWay.cs" />
+     <Compile Include="Assets\Plugins\UnitySteer\PolylinePathway.cs" />
+     <None Include="Assets\Plugins\UnitySteer\README.TXT" />
+     <Compile Include="Assets\Plugins\Ani.cs" />
+     <Compile Include="Assets\Plugins\Animator.cs" />
+     <Compile Include="Assets\Plugins\Billboard.cs" />
+     <Compile Include="Assets\Plugins\Cargo.cs" />
+     <Compile Include="Assets\Plugins\CSVReader.cs" />
+     <None Include="Assets\Plugins\DiffusePlusUnlit.shader" />
+     <Compile Include="Assets\Plugins\Globals.cs" />
+     <Compile Include="Assets\Plugins\GUICameras.cs" />
+     <Compile Include="Assets\Plugins\GUIManager.cs" />
+     <Compile Include="Assets\Plugins\GUIQuadMgr.cs" />
+     <Compile Include="Assets\Plugins\GUIQuadObj.cs" />
+     <Compile Include="Assets\Plugins\GUITextMgr.cs" />
+     <Compile Include="Assets\Plugins\GUITextObj.cs" />
+     <Compile Include="Assets\Plugins\GUITextureMgr.cs" />
+     <Compile Include="Assets\Plugins\GUITextureObj.cs" />
+     <Compile Include="Assets\Plugins\iTouch.cs" />
+     <Compile Include="Assets\Plugins\iTween.cs" />
+     <Compile Include="Assets\Plugins\LDB.cs" />
+     <None Include="Assets\Plugins\Outlined Diffuse.shader" />
+     <Compile Include="Assets\Plugins\Steerable.cs" />
+     <Compile Include="Assets\Plugins\Steerable_bodiless.cs" />
+     <Compile Include="Assets\Plugins\TextureUtils.cs" />
+     <Compile Include="Assets\Plugins\UnitDB.cs" />
+     <None Include="Assets\Plugins\Unlit.shader" />
+     <Compile Include="Assets\Plugins\Utils.cs" />
+     <Compile Include="Assets\Randomness\Randomness.cs" />
+     <None Include="Assets\Randomness\RandomnessDoc.txt" />
+     <None Include="Assets\Scripts\Audio Scripts\Jukebox.js" />
+     <Compile Include="Assets\Scripts\Camera Scripts\MouseLook.cs" />
+     <None Include="Assets\Scripts\Camera Scripts\MouseOrbit.js" />
+     <None Include="Assets\Scripts\Camera Scripts\SmoothFollow.js" />
+     <None Include="Assets\Scripts\Camera Scripts\SmoothLookAt.js" />
+     <None Include="Assets\Scripts\AICommander.js" />
+     <None Include="Assets\Scripts\BlazonGen.js" />
+     <Compile Include="Assets\Scripts\BlazonMaker.cs" />
+     <None Include="Assets\Scripts\Building.js" />
+     <None Include="Assets\Scripts\CameraControls.js" />
+     <None Include="Assets\Scripts\CampaignObjectPicker.js" />
+     <None Include="Assets\Scripts\CampaignPlanet.js" />
+     <None Include="Assets\Scripts\Combatant.js" />
+     <None Include="Assets\Scripts\Culture.js" />
+     <Compile Include="Assets\Scripts\Destructible.cs" />
+     <None Include="Assets\Scripts\Director.js" />
+     <None Include="Assets\Scripts\Director_campaign.js" />
+     <None Include="Assets\Scripts\DynastyGen.js" />
+     <None Include="Assets\Scripts\FleetShip.js" />
+     <None Include="Assets\Scripts\FleetWeapon.js" />
+     <None Include="Assets\Scripts\GalaxyGen.js" />
+     <None Include="Assets\Scripts\Good.js" />
+     <None Include="Assets\Scripts\GUIGameOver.js" />
+     <None Include="Assets\Scripts\GUIMainMenu.js" />
+     <Compile Include="Assets\Scripts\GUIMicron.cs" />
+     <None Include="Assets\Scripts\GUIPainter.js" />
+     <None Include="Assets\Scripts\GUIPanel.js" />
+     <None Include="Assets\Scripts\GUIPlanetPreview.js" />
+     <None Include="Assets\Scripts\GUIPlanetSidebar.js" />
+     <None Include="Assets\Scripts\GUISquadronSidebar.js" />
+     <None Include="Assets\Scripts\HealArea.js" />
+     <None Include="Assets\Scripts\House.js" />
+     <None Include="Assets\Scripts\HouseGen.js" />
+     <None Include="Assets\Scripts\Messages.js" />
+     <None Include="Assets\Scripts\Minimap2D.js" />
+     <None Include="Assets\Scripts\NewBehaviourScript.js" />
+     <None Include="Assets\Scripts\ObjectPicker.js" />
+     <None Include="Assets\Scripts\Planet.js" />
+     <None Include="Assets\Scripts\PlanetGen.js" />
+     <None Include="Assets\Scripts\Player.js" />
+     <None Include="Assets\Scripts\Shipyard.js" />
+     <None Include="Assets\Scripts\SlotPool.js" />
+     <Compile Include="Assets\Scripts\SpriteClientDemo.cs" />
+     <None Include="Assets\Scripts\SpriteObject.js" />
+     <Compile Include="Assets\Scripts\SpriteRenderer.cs" />
+     <None Include="Assets\Scripts\SquadInfluence.js" />
+     <None Include="Assets\Scripts\Squadron.js" />
+     <None Include="Assets\Scripts\SquadronSpawner.js" />
+     <None Include="Assets\Scripts\Star.js" />
+     <None Include="Assets\Scripts\Starbase.js" />
+     <None Include="Assets\Scripts\Startup_skirmish.js" />
+     <None Include="Assets\Scripts\TeamSettings.js" />
+     <None Include="Assets\Scripts\VersionInfo.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\ActivateTrigger.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\CombineChildren.cs" />
+     <None Include="Assets\Standard Assets\Scripts\DragRigidbody.js" />
+     <None Include="Assets\Standard Assets\Scripts\FPSWalker.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\MeshCombineUtility.cs" />
+     <None Include="Assets\Standard Assets\Scripts\TimedObjectDestructor.js" />
+     <Compile Include="Assets\Standard Assets\Blazon.cs" />
+     <None Include="Assets\Standard Assets\Bullet.js" />
+     <Compile Include="Assets\Standard Assets\PersistentObject.cs" />
+     <Compile Include="Assets\Standard Assets\SetText.cs" />
+     <None Include="Assets\ToonShading\Sources\Toony-Basic.shader" />
+     <None Include="Assets\ToonShading\Sources\Toony-BasicOutline.shader" />
+     <None Include="Assets\ToonShading\Sources\Toony-Lighted.shader" />
+     <None Include="Assets\ToonShading\Sources\Toony-LightedOutline.shader" />
+ <Reference Include="C5">
+ <HintPath>Assets\Plugins\UnitySteer\C5\C5.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>Assets\Plugins\LitJson.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
+	

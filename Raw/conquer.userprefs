@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GUIPainter.js">
+    <Files>
+      <File FileName="Assets\Scripts\ObjectPicker.js" Line="212" Column="4" />
+      <File FileName="Assets\Scripts\Squadron.js" Line="145" Column="32" />
+      <File FileName="Assets\Scripts\GUIPainter.js" Line="174" Column="5" />
+      <File FileName="Assets\Scripts\FleetShip.js" Line="184" Column="1" />
+      <File FileName="Assets\Scripts\TeamSettings.js" Line="26" Column="1" />
+      <File FileName="Assets\Scripts\GUIPanel.js" Line="24" Column="1" />
+      <File FileName="Assets\Standard Assets\Blazon.cs" Line="7" Column="39" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

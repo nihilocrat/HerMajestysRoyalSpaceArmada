@@ -1,0 +1,83 @@
+Adriansen 	Andersen 	Any
+Arge 	Arneborg 	Assenbjerg
+Auken 	Bau 	Beck
+Bekker 	Berthelsen 	Billes
+Binzer 	Blach 	Bock
+Bogedal 	Bondo 	Bonnikson
+Borge 	BrÝ nstedt 	Brahe
+Brandhorst 	Broberg 	Brondun
+Burmeister 	Cabble 	Carlsen
+Carstensen 	Ceder 	Chemnitz
+Christensen 	Christiansen 	Clahn
+Claussen 	Colding 	Crumlin
+Dalum 	Damsgaard 	Danielsson
+Didenksen 	Drusse 	Ebel
+Eberlein 	Ejlersgaard 	Eldjárn
+Ellegaard 	Eriksen 	Ernst
+Espersen 	FÝ jl 	Falkoner
+Fallingborg 	Fenger 	Fetterlein
+Fine 	Fog 	Follerup
+Frandsen 	Frandson 	Fredskild
+Friis-Knutzen 	Fynbo 	Gade
+Gimsing 	Glob 	Goldbaek
+GrÝ n 	Gram 	Greve
+Grimlot 	Gruntvig 	Guildenstern
+Guldbrandsen 	HÝ eg 	Halkenhvad
+Hamburger 	Hammer 	Hamsun
+Hannestad 	Hansen 	Hardenberg
+Hasso 	Hedhoft 	Heiberg
+Heintze 	Helveg 	Henrik
+Hjelmslev 	Hoegh 	Hogh
+Holby 	Holm 	Hørby
+Hoyer 	Hvass 	Hviid
+Hylgaard 	JÝ rgensen 	Jacobsen
+Jakkelsen 	Jamissen 	Jaspersen
+Jensen 	Jeppesen 	Jepsen
+Johannsen 	Johansson 	Jorgensen
+Junge 	Karseffni 	Kaustrop
+Kingo 	Kirkeby 	Kjeldsen
+Kjölbye 	Klindt 	Kock
+Kofod 	Kolb 	Kotzebue
+Krak 	Krogh 	Kruhl
+Lò bing 	Lagermann 	Lander
+Langvardt 	Larsen 	Laudrup
+Laugeson 	Laundsen 	Lauritzen
+Laursen 	Lavrsen 	Licht
+Lillesoe 	Lorenz 	Loyen
+Lund 	Lundgaard 	Lundgard
+Lundvall 	Lynnerup 	MÝ ller
+Madsen 	Maj 	Majland
+Mandelbrot 	Markert 	Meindl
+Meinert 	Meling 	Meulengracht
+Mikkelsen 	Milling 	Moesgaard
+Molnar 	Moltke 	Most
+Munk 	Nerhus 	Niebuhr
+Nielsen 	Nielson 	Nissen
+Nylén 	Obel 	Olrik
+Olsen 	Orum 	Ostgerg
+Ottesen 	Ove 	Pallesen
+Pálsson 	Paulsen 	Pedersen
+Petersen 	Piechnik 	Pilegaard
+Poertner 	Qvist 	Raaby
+Rasmussen 	Ravn 	Reuter
+Rieper 	Riis 	Rink
+Riseger 	Roesdahl 	Rohrmann
+Ronholt 	Rønne 	Rosenkrantz
+Rriis 	Rude 	Sand
+Sandstrod 	Schjonberg 	Schmeichel
+Schou 	Seidenfaden 	Sellevold
+Simonsen 	Skaarup 	Skou
+Skovgaard 	Soerensen 	Solvig
+Sondergaard 	Sonne 	Sørensen
+Sponneck 	Staer 	Steincke
+Stenger 	Storegaard 	Stubbe
+Stuer 	Svendsen 	Tarnovius
+Teglbjaerg 	Telling 	Thodberg
+Thomsen 	Thornom 	Thunmark
+Thyregod 	Tilling 	Toefting
+Toksvig 	Tommen 	Tyllesen
+Uhre 	Vilfort 	Villumsen
+Ving 	Virl 	Wain
+Werlauff 	Wieghorst 	Willadsen
+Witzke 	Wiuff 	Zinck
+Zoega 	  
