@@ -1,0 +1,14 @@
+Eques
+Dominus
+Baro
+Comes
+Dux
+Rex
+Imperator
+Equatrix
+Domina
+Baronissa
+Comitissa
+Ducissa
+Regina
+Imperatrix

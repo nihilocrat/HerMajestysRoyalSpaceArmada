@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+
+Project("{99BE01A1-C5F4-3A8D-FB05-CA5B8BC4D604}") = "conquer", "conquer.csproj", "{3D9BC6C1-8A58-5AD9-598A-93EEB22DC1A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D9BC6C1-8A58-5AD9-598A-93EEB22DC1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9BC6C1-8A58-5AD9-598A-93EEB22DC1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9BC6C1-8A58-5AD9-598A-93EEB22DC1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9BC6C1-8A58-5AD9-598A-93EEB22DC1A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	
+EndGlobal

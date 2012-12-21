@@ -1,0 +1,14 @@
+Sieur
+Seigneur
+Baron
+Comte
+Duc
+Roi
+Empereur
+Dame
+Madame
+Baronne
+Comtesse
+Duchesse
+Reine
+Imperatrice
