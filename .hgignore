@@ -1,0 +1,8 @@
+
+syntax: glob
+._*
+*.wings\#
+*.wings~
+Assembly-*
+Library/*
+Save/*
